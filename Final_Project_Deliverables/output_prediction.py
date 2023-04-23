@@ -13,11 +13,11 @@ def load_pickle():
   global clf
   global le
   global vectorizer
-  with open('model.pickle', 'rb') as f:
+  with open('Final_Project_Deliverables\model.pickle', 'rb') as f:
       clf = pickle.load(f)
-  with open('label_encode.pickle', 'rb') as f:
+  with open('Final_Project_Deliverables\label_encode.pickle', 'rb') as f:
       le = pickle.load(f)
-  with open('count_vec.pickle', 'rb') as f:
+  with open('Final_Project_Deliverables\count_vec.pickle', 'rb') as f:
       vectorizer = pickle.load(f)
 
 
