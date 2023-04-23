@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Single Page Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="../static/js/app.js"></script>
+</head>
+<body>
+    <h1>JobSelect</h1>
+	<div class="container">
+        
+		<div class="box">
+			<form id="form">
+				<div id="section-1" class="show">
+					<h5>Name:</h5>
+					<input type="text" id="name" name="name">
+					<h5>Description:</h5>
+					<textarea id="description" name="description"></textarea>
+                    <button id="button-1" class="btn"><i class="material-icons">arrow_forward_ios</i></button>
+				</div>
+				<div id="section-2">
+					<h5>Experience</h5>
+					<div id="experiences">
+						<div class="experience">
+							<label for="company">Company:</label>
+							<input type="text" id="company" name="company">
+
+							<label for="position">Position:</label>
+							<input type="text" id="position" name="position">
+
+							<label for="duration">Duration:</label>
+                            <ul class="duration_dd">
+                                <li><label for="month">Month:</label></li>
+                                <li>
+                                    <select id="month" name="month">
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    </select>
+                                </li>
+                                <li><label for="year">Year:</label></li>
+                                <li>
+                                    <select id="year" name="year"></select>
+                                </li>
+                            </ul>
+						</div>
+					</div>
+					<button type="button" onclick="addExperience()">Add Experience</button>
+                    <button id="button-2" style="display: none;" class="btn"><i class="material-icons">arrow_forward_ios</i></button>
+				</div>
+
+				<div id="section-3">
+					<h5>Education</h5>
+					<div id="education">
+						<div class="degree">
+							<label for="institute">Institute:</label>
+							<input type="text" id="institute" name="institute">
+
+							<label for="degree">Degree:</label>
+							<input type="text" id="degree" name="degree">
+
+							<label for="edu-description">Description:</label>
+							<textarea id="edu-description" name="edu-description"></textarea>
+						</div>
+					</div>
+					<button type="button" onclick="addEducation()">Add Education</button>
+                    <button id="button-3" class="btn"><i class="material-icons">arrow_forward_ios</i></button>
+				</div>
+
+				<div id="section-4">
+					<h5>Skills</h5>  
+                        <div class="row">
+                            <div class="col s6">
+                                <input type="text"  id="lg-input1" placeholder="Add a keyword here">
+                            </div>
+                            <div class="col s2">
+                                <a id="cmd-ChipsAjout1" class="waves-effect waves-light btn-2"><i class="material-icons">add</i></a>
+                            </div>
+                        </div>
+                        <div id="lg-Chips1"></div>
+                    <button id="button-4" class="btn"><i class="material-icons">arrow_forward_ios</i></button>
+				</div>
+
+                <div id="section-5">
+					<h5>Courses</h5>  
+                        <div class="row">
+                            <div class="col s6">
+                                <input type="text"  id="lg-input2" placeholder="Add a keyword here">
+                            </div>
+                            <div class="col s2">
+                                <a id="cmd-ChipsAjout2" class="waves-effect waves-light btn-2"><i class="material-icons">add</i></a>
+                            </div>
+                        </div>
+                        <div id="lg-Chips2"></div>
+                        <button type="submit" id="button-5" class="btn-3" disabled>Submit</button>
+				</div>
+                
+			</form>
+            <div id="section-6">
+            </div>
+		</div>
+	</div>
+	
+</body>
+</html>
